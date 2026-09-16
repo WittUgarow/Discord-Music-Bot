@@ -1,0 +1,10 @@
+.env
+.git
+.gitignore
+__pycache__
+*.pyc
+.venv
+.vscode
+.vs
+downloads/
+Testing/
