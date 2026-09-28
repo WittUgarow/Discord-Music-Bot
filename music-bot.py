@@ -36,7 +36,6 @@ def getSpotifyToken():
     )
 
     data = response.json()
-    print(data)
     return data["access_token"]
 
 def spotifySearch(search):
@@ -153,8 +152,8 @@ class MusicControls(discord.ui.View):
 
     @discord.ui.button(label="Stop", style=discord.ButtonStyle.secondary)
     async def stop_button(self, interaction, button):
-        await self.player.stop()
         await interaction.response.send_message("Stopped!", ephemeral=True)
+        await self.player.stop()
 
 class Song:
     def __init__(self, title, artist, path, url):
